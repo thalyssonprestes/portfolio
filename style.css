@@ -14,17 +14,26 @@ html {
 
 body {
   height: 100vh;
-  background-color: #626262;
+  background-color: #000000;
   color: #626262;
   line-height: 1.6;
+  height: 100%;
+  background: linear-gradient(black);
 }
 
 a {
   text-decoration: none;
   color: inherit;
 }
-
-
+#home{
+opacity: 10;
+}
+#about{
+opacity: 0.9;
+}
+#projects{
+  opacity: 50%;
+}
 nav {
   color: white;
   background-color: #000000;
@@ -184,29 +193,29 @@ h2 {
   display: flex;
   gap: 10rem;
   align-items: flex-start;
-  max-width: 1200px;
-  margin: 60px 60px;
+  max-width: 850px;
+  margin: 20px 90px;
 }
 
 .about-text {
   flex: 1;
-  min-width: 50%;
+  min-width: 80%;
 }
 
 .gallery-container {
   flex: 1;
-  min-width: 60%;
+  min-width: 55%;
 }
 
 .gallery {
   display: flex;
-  gap: 6rem;
-  margin-top: 2.5rem;
+  gap: 5rem;
+  margin-top: 1.2rem;
 }
 
 .gallery-item {
   flex: 1;
-  min-height: 50px;
+  min-height: 100px;
   overflow: hidden;
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -214,7 +223,7 @@ h2 {
 }
 
 .gallery-item:hover {
-  transform: scale(1.5);
+  transform: scale(1.2);
   box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -233,14 +242,14 @@ h2 {
 .projects-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 10rem;
+  gap: 2rem;
   justify-content: center;
 }
 
 .project-card {
   flex: 1;
   min-width: 400px;
-  max-width: 450px;
+  max-width: 350px;
   background: rgb(0, 0, 0);
   border-radius: 8px;
   overflow: hidden;
@@ -272,7 +281,8 @@ h2 {
 
 /* CONTATO */
 #contact {
-  background-color: rgb(0, 0, 0);
+  margin-top: 00px;
+  background-color: rgb(0, 0, 0);/*rgb(252, 116, 116); INTERESSANTE*/
   text-align: center;
   padding: 3rem 1rem;
 }
@@ -304,7 +314,11 @@ h2 {
   transform: scale(1.1);
   color: white;
 }
-
+@media(max-width: 1231px){
+  #contact{
+    margin-top:100px;
+  }
+}
 /* Responsivo */
 @media (max-width: 768px) {
   .about-content {
@@ -354,6 +368,9 @@ h2 {
 @media (max-width: 480px) {
   .gallery {
     grid-template-columns: 1fr;
+  }
+  #contact{
+    margin-top: 500px;
   }
 }
 
