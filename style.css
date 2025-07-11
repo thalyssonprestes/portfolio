@@ -1,0 +1,381 @@
+
+html {
+  scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: #626262;
+  color: #626262;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+nav {
+  color: white;
+  background-color: #000000;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  height: 70px;
+  z-index: 999;
+}
+
+nav .nav-bar {
+  position: relative;
+  height: 200%;
+  max-width: 2000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(30px);
+  box-shadow: 0px 0px 30px #00ffee;
+  border: 1.5px solid #00ffee;
+  background-color: #000000;
+}
+
+.nav-bar .nav-links {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-bar .nav-links li {
+  list-style: none;
+  margin: 0 5px;
+}
+
+
+.nav-links li a {
+  position: relative;
+  font-size: 17px;
+  font-weight: 400;
+  color: #ffffff;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-links li a::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 0;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #00ffee;
+  transition: width 0.4s ease;
+}
+
+.nav-links li a:hover {
+  color: #00ffee;
+}
+
+.nav-links li a:hover::before {
+  width: 100%;
+}
+
+.logo-tp {
+  font-size: 20px;
+  font-weight: bold;
+  color: #00ffee;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 4px;
+  background: linear-gradient(45deg, #00ffee, #005eff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px #00ffee, 0 0 20px #ffffff;
+  padding: 10px 20px;
+  border-radius: 50%;
+  display: inline-block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo-tp:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 20px #ffffff;
+}
+
+
+section {
+  min-height: 100vh;
+  padding: 6rem 2rem 2rem;
+}
+
+h1, h2, h3 {
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+}
+
+h2 {
+  font-size: 2em;
+  color: white;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.grande {
+  font-size: 1.5rem;
+}
+
+.destaque {
+  color: #00ffee;
+}
+
+#home {
+  display: flex;
+  align-items: center;
+  background-color: #000000;
+  width: 100%;
+  padding-left: 10%;
+}
+
+.home-content {
+  text-align: left;
+  max-width: 600px;
+}
+
+#home h1 {
+  font-size: 3.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-weight: 300;
+}
+
+.name-highlight {
+  font-family: 'Dancing Script', cursive;
+  font-size: 4rem;
+  color: #00ffee;
+  display: inline-block;
+  margin-left: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.3rem;
+  color: #b0b0b0;
+  letter-spacing: 1px;
+}
+
+#about {
+  background-color: rgb(0, 0, 0);
+  padding: 6rem 2rem;
+}
+
+.about-content {
+  display: flex;
+  gap: 10rem;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 60px 60px;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 50%;
+}
+
+.gallery-container {
+  flex: 1;
+  min-width: 60%;
+}
+
+.gallery {
+  display: flex;
+  gap: 6rem;
+  margin-top: 2.5rem;
+}
+
+.gallery-item {
+  flex: 1;
+  min-height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.5);
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#projects {
+  background-color: #000000;
+  width: 100%;
+  height: 100vh;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10rem;
+  justify-content: center;
+}
+
+.project-card {
+  flex: 1;
+  min-width: 400px;
+  max-width: 450px;
+  background: rgb(0, 0, 0);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(30px);
+  box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+  border: 1.5px solid rgba(255, 255, 255, 0.18);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 2.5rem;
+}
+
+/* CONTATO */
+#contact {
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.icones-contato {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.icones-contato .icone {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #00ffee;
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.icones-contato .icone span {
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: white;
+}
+
+.icones-contato .icone:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+  }
+
+  .gallery {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .gallery-item {
+    min-height: 300px;
+  }
+
+  .about-text, .gallery-container {
+    min-width: 100%;
+  }
+
+  nav ul {
+    justify-content: center;
+  }
+
+  nav li {
+    margin-left: 1rem;
+  }
+
+  .project-card {
+    min-width: 100%;
+  }
+
+  .icones-contato {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .icones-contato .icone {
+    font-size: 2.5rem;
+  }
+
+  .icones-contato .icone span {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+.loader span {
+  margin-right: 2px;
+  display: inline-block;
+  transform-origin: 0% 70%;
+  transform-style: preserve-3d;
+  animation: animate 2.4s infinite linear;
+  animation-delay: var(--delay);
+  color: cyan;
+}
+
+.loader span:nth-child(even) {
+  color: hotpink;
+}
+
+@keyframes animate {
+  35% {
+    transform: rotateZ(360deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
