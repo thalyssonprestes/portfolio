@@ -10,6 +10,7 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -19,6 +20,7 @@ body {
   line-height: 1.6;
   height: 100%;
   background: linear-gradient(black);
+  scroll-behavior: smooth;
 }
 
 a {
@@ -143,7 +145,7 @@ h2 {
 }
 
 .grande {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .destaque {
@@ -191,10 +193,10 @@ h2 {
 
 .about-content {
   display: flex;
-  gap: 10rem;
+  gap: 15rem;
   align-items: flex-start;
   max-width: 850px;
-  margin: 20px 90px;
+  margin: 40px 150px;
 }
 
 .about-text {
@@ -210,12 +212,12 @@ h2 {
 .gallery {
   display: flex;
   gap: 5rem;
-  margin-top: 1.2rem;
+  margin-top: 2.0rem;
 }
 
 .gallery-item {
   flex: 1;
-  min-height: 100px;
+  min-height: 200px;
   overflow: hidden;
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -242,7 +244,7 @@ h2 {
 .projects-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 2rem;
+  gap: 4rem;
   justify-content: center;
 }
 
